@@ -1,0 +1,1603 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies: {}
+    packageManagerDependencies:
+      pnpm:
+        specifier: 12.16.1
+        version: 12.16.1
+
+packages:
+
+  '@pnpm/exe.android-arm64@12.16.1':
+    resolution: {integrity: sha512-PKf78Ew+i0CBYf0Xc+eMcqQiqyBT+u8XCVg1F5roc98/6wWfdYlWhrUMmEBiKWaJ3JqHxrtt8l1NwZ7qfJt2/Q==}
+    cpu: [arm64]
+    os: [android]
+
+  '@pnpm/exe.android-x64@12.16.1':
+    resolution: {integrity: sha512-xdu7gMbB98pdvhwMeA6612Of515FDlRUtfA/1f7nWPZfPLnEdSRBO2u+1N0XBtQ/ennhPH/lrxB1gC6gnR/cdg==}
+    cpu: [x64]
+    os: [android]
+
+  '@pnpm/exe.darwin-arm64@12.16.1':
+    resolution: {integrity: sha512-pVbmIIbhixiLvADLu1WA3TaW8FZy/D72R1De27WbbFx8/2mxvnsTyFVm4fO9kjpjMY7RzJd48CiQ96p8fO3ebQ==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@pnpm/exe.darwin-x64@12.16.1':
+    resolution: {integrity: sha512-xZvQBFqcZjO7vFKTK3XsJpqY6lnBL9EWSLCzVUPq3kZ94+D96gwJCa76xxGNK8Cj32f4eeM91Qg+yNRR4sRpDw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@pnpm/exe.freebsd-x64@12.16.1':
+    resolution: {integrity: sha512-zTtunfi9mBhRXiXEJYfwiJj0tk7MgTSfqDSRh+Az9FZ9THazVIiQiVNS8jpcsftDOqu7LKNffQdjmgwHDThfUg==}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@pnpm/exe.linux-arm64-musl@12.16.1':
+    resolution: {integrity: sha512-BJ3mOmcmQgcUo92Ee/WfEOt1pRiv3y2MMAkhEiYHd85UiPpHTfFhv+SpCbALmfExzXk3UlaRtMYwHlkQymc4VA==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-arm64@12.16.1':
+    resolution: {integrity: sha512-JaRd5gNxwdNGBBkrZFt8bknrK4YmHVJBW0JMhUQ0fJ0dEYp6C2GT9ExaCqOO8EwYEyqM+jpKgJIK+8WFaJy3ew==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-ppc64@12.16.1':
+    resolution: {integrity: sha512-FnSV0Jv40S1cMv7vFNWwvu0X567Lec4L4HCRead3CFcD6zQDNbGw81s8N5bcKPahtPD9ApVuhsbmFCx4rw6RMw==}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-riscv64@12.16.1':
+    resolution: {integrity: sha512-C1Sww4FN5IttD4atRRhAKmQtSGWVp04ZAKNxO8pfu2bkRPwOW+7v+2DH1Xs1W+kZYYpO86BYDvUcadefF+AgaQ==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-s390x@12.16.1':
+    resolution: {integrity: sha512-kn2fautsTcxIMODoovQVqZyfpDRdNgGkoeVqNdrKqbeBBvrEl+fXLkmZiq5xDht1LMr4sYiCNcsMfNMT6JPFmg==}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-x64-musl@12.16.1':
+    resolution: {integrity: sha512-PM6ccHCOe/O9SsTflTJTYWfwogJZa6EmUvpnwZgiPguJBddh20wDQKgxUPXf48rDsPm9vMsIij0uHswwwbXL8g==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-x64@12.16.1':
+    resolution: {integrity: sha512-RK//8ZLcXGW8A2k8bQOXZDBN1Qu92zN4dYnG1bzj1zoQ1fkZ6jNzZ1AvXtsfGVma795CJtvoaF5bLXf4l/FIUw==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.win32-arm64@12.16.1':
+    resolution: {integrity: sha512-Ox3kNNVxtGw6pK7SVejmeOUgHhUTZgAM7NQQ6cU7frPw3ix9+j7d2MGbRg3fyEFAaKWq8ZAZLTQGcDyLnAu+qA==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@pnpm/exe.win32-x64@12.16.1':
+    resolution: {integrity: sha512-k+FhRJ0ttphFoFIVB1Sk4v76YJAulafmA/Ly57cysesUhhIzVlApeOShUz0jXubKx317TThlEfpQrukldnqORA==}
+    cpu: [x64]
+    os: [win32]
+
+  pnpm@12.16.1:
+    resolution: {integrity: sha512-CR0d7nknV1Zhsl2rPCrjHK/BxU1rce1qZgDPDByxBDSkR+rhQBXxsj4ua+3u1535SpMuIWTSgyKA3OP7MvZW0Q==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+snapshots:
+
+  '@pnpm/exe.android-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.android-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.darwin-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.darwin-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.freebsd-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-arm64-musl@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-ppc64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-riscv64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-s390x@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-x64-musl@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.win32-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.win32-x64@12.16.1':
+    optional: true
+
+  pnpm@12.16.1:
+    optionalDependencies:
+      '@pnpm/exe.android-arm64': 12.16.1
+      '@pnpm/exe.android-x64': 12.16.1
+      '@pnpm/exe.darwin-arm64': 12.16.1
+      '@pnpm/exe.darwin-x64': 12.16.1
+      '@pnpm/exe.freebsd-x64': 12.16.1
+      '@pnpm/exe.linux-arm64': 12.16.1
+      '@pnpm/exe.linux-arm64-musl': 12.16.1
+      '@pnpm/exe.linux-ppc64': 12.16.1
+      '@pnpm/exe.linux-riscv64': 12.16.1
+      '@pnpm/exe.linux-s390x': 12.16.1
+      '@pnpm/exe.linux-x64': 12.16.1
+      '@pnpm/exe.linux-x64-musl': 12.16.1
+      '@pnpm/exe.win32-arm64': 12.16.1
+      '@pnpm/exe.win32-x64': 12.16.1
+
+---
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@modelcontextprotocol/sdk':
+        specifier: ^1.32.2
+        version: 1.32.2(zod@4.6.7)
+      '@scaleway/sdk':
+        specifier: ^4.2.8
+        version: 4.2.8(@scaleway/sdk-client@2.16.0)
+      zod:
+        specifier: ^4.6.7
+        version: 4.6.7
+
+packages:
+
+  '@hono/node-server@2.1.6':
+    resolution: {integrity: sha512-p/KH9MnfNcsm3sR6x4lNgm5j+QN4Et8srKredl9DZfXiyZ1UQ3aQ2YVpFLbqktYN5JI+DB+VZFKM2PqE5hLKjQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      hono: ^4 || ^5.0.0-0
+
+  '@modelcontextprotocol/sdk@1.32.2':
+    resolution: {integrity: sha512-SWsVtH/0vULSQStoZ6xxH2K09Li8fXYTMC64ZeogCdpZ3XSi1eCPOByV1OpuJxuI3OcmHhosDWYyii07tpPsLw==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@cfworker/json-schema': ^4.1.1
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      '@cfworker/json-schema':
+        optional: true
+
+  '@scaleway/random-name@6.0.2':
+    resolution: {integrity: sha512-fhR2aCzxoZlOZcCM42srbALdpdqMy79LwOK5mVf4sGG1uknn095mr5PQ/0/zwfk/FX2KycZwbKJzr4zP6CG3Zg==}
+    engines: {node: '>=24.x'}
+
+  '@scaleway/sdk-account@2.17.0':
+    resolution: {integrity: sha512-xTMdxQVlPhBJji32HbfwakgoYTxx9FHAyzcvWRKt+W76ztZUDQT7KnitOAgydtYo5+54nEgFvxylS1f/6VbPUw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-annotations@1.12.0':
+    resolution: {integrity: sha512-7TgD/aKmZXsRDCtbY1XVl9JD9VVpDATPHt3C0hDV1fRVNOe/HugiYStKYKwHV8kCxcXry/Nahw4QRMXc1N5W7A==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-applesilicon@2.20.0':
+    resolution: {integrity: sha512-X0Iml20K30onQt1rPPgdjT8P7K7LgaxcdKKqdihzBeixdEkoIwwY3TPekNUppCzjDdj1TA5ILih/V08XZjabNg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-audit-trail@2.34.0':
+    resolution: {integrity: sha512-PiJyNGk9vFbg8+do880yWLgZ/t4Y/k/LMSVyY7CNshiqhCEbGcydJ1V6dG56Udbzo3JOUgExXOVmtLPEEi38Gg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-autoscaling@2.18.0':
+    resolution: {integrity: sha512-F5Olxb0p1zRnHOQSDKxr+7LqZftm4PKxD+yM2w8AwQL/2mWXPCn8azAoZpOVc25ISv2qhhbZAfmZLZ2VTFDZ6A==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-baremetal@2.19.0':
+    resolution: {integrity: sha512-+Nk2vCo6nAr0oGQcRPM4YAIN+ZCCbgsSbLY8UILrpjjmVuuzEwlzXVDk89JWzvSL1Zt6JlCKgsrN81VCUcPzfQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-billing@2.21.0':
+    resolution: {integrity: sha512-JaVkXjhizB8MjjhSPZaZjExXx6KSt7MBlLHeesdwfNtbymQF5rT0MhJsIaLgfMlWqkjuQkV+icUOQX2jGH5oIw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-block@2.22.0':
+    resolution: {integrity: sha512-zO/H4Nrq0Temyt5k6f/RKyUx+DeBKNx36DY0wnePy+nWdfiNqdH22chH5o9BejGODvu6ZvUgDW61WeAHndY+cA==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-client@2.16.0':
+    resolution: {integrity: sha512-ZUoMPWY8b0YVD8hCvKVhyjJQwkwHmTKJQaGC6fWjexu7JF2LnYnWlVamZlImbyrThskhUvFP2VGEaYKbVLmCiw==}
+
+  '@scaleway/sdk-cockpit@2.17.0':
+    resolution: {integrity: sha512-CrXDS4ilwAOjeBH4Pu1VNRs7hzisjspq9Qzx7LdmqwcVonEcMzgcbzbvg5pBe2MPNx69A5yzLphVLJMCEnNrKA==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-container@2.22.0':
+    resolution: {integrity: sha512-9Kjw56XdrtOC+Xbv1bhNWh0w6e41eJXAPQSoXNxYtlt1GggG7UA6xJiJwSkxgfdXXDNjXsR0C+znJwwU+I3cmw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-datalab@1.16.0':
+    resolution: {integrity: sha512-pr11WoL9ky9Z/nNA/6CCLpQseQy88zYajUlo+Hf5Uy7zfuA6v5giggpTB1b0i9YN/82aygVwksUdqHS24Mtopg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-dataviz@1.13.0':
+    resolution: {integrity: sha512-S7dlyBjvm/LycuNwmDCz9qOGZQ2axYgPj6tzNuAVZ8M2WM6HmYHNOgckCqmVUjIn2LKOyZo+b5ihrT2ADK8AIA==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-datawarehouse@2.23.0':
+    resolution: {integrity: sha512-cdFzVcGEtFE4vkVjE2qGhJoOkKG3522l6xJbHFQyCx796Tczuk6U4iR2omLb+kZRbDLdQVQj/BeK7CmWLtMIBg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-dedibox@2.22.0':
+    resolution: {integrity: sha512-oeymKEBV+9nZTqwdv6uq7kf9vuE79/6X87uEPF+9l1/Dr3tXyAtWnQF7+f972i6pTf1kxuO0Wn6P2701uB6Ivw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-domain@2.20.0':
+    resolution: {integrity: sha512-U/BdjD2w8aSWDH02BYso/sXJgmBV3uZnv3+P120JCAQhmoMIdVrmQiWLyM8g8cmkOLGQ2iuwOJ7JDFxWL22BrA==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-edge-services@2.28.0':
+    resolution: {integrity: sha512-+o9Pmde/0/Zu46MY40qlnghtF7pBd5UWL/e3qRoA0rDT863D8aEduffiPDXJH3pDOUniNFMrGHakcItpSpOQPw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-environmental-footprint@2.23.0':
+    resolution: {integrity: sha512-NyzSIOzuW06G22Q9OHNcdt7n23vsEfyCVZ+O/GWxoduFsoc/syxbgbZw2llga6R4SVcnymV3YrY7M2uJDLK8FQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-file@2.20.0':
+    resolution: {integrity: sha512-YxZLW03FXlAqflgMuV6ziDd0QrpvtW7SjUdFah/o6OTn+T6YX3+R4vkvCe8HxuO39nGOqhoI/eDy8CkfduWVfw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-flexibleip@2.17.0':
+    resolution: {integrity: sha512-DFwzCv2z9gTYohDfhwAf6t9b5GKiI3/W+FiAlnar4tr/hbVYEOsRJuGtKM9oxeh1mPUeEebfI+p6nXpFE+SnCw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-function@2.19.0':
+    resolution: {integrity: sha512-OeA9St036Uu+eDEM+BvGogDAKtggBuWVxDtJLlcklbROiseWedyc+pyK2Ujpw/4WJIyIIIlDIKTsN0whTPjQCg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-iam@2.22.0':
+    resolution: {integrity: sha512-Gia0mIdDztl7YvDMJS+iDe13kG+/NqKs5M19oKlu0BeDhrg6q11Er2ykfzx2I3fcKdxfQtZvNUcFLEkIOAcCuQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-inference@2.21.0':
+    resolution: {integrity: sha512-+CMOPxW+A7mK2eiggANTR7mD5qEzUhbvhQyRES5N7+L3twbqNtk3fgE1SN9HwWtfgNUc0se0R4BMlR9GZZgXOg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-instance@2.27.0':
+    resolution: {integrity: sha512-dhPVd65ZBs/0N5blbspKhP1Xf/NRuBS0b+/v7w3aktRpi6tQPc80ciWuw7V5UuYEcn49TkPyHEyhnOzfyRAosg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-interlink@2.18.0':
+    resolution: {integrity: sha512-6qLtq5L0YWIs4b1wPgk+XwKsfNfDuPIvcG6+c6wsL+LQahuvH7IpHRwLsypogG5aUs3VB6wfaGMziTSFS3SVMg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-iot@2.17.0':
+    resolution: {integrity: sha512-Y0U/9nY3ejGYkhCNZOSaXdx2nzgy2gtWssItGr5JW+3HhfOglV877UollIGkxk3Bc4hGKH6cIcPIBcR8X/O/Xg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-ipam@2.21.0':
+    resolution: {integrity: sha512-xMH9QlJSZbk9inHu/uFz4axhNSqmyo6OKg8syWmAeq02s43CK+gRIkJcMXzDO6YZkTRNIpEc/y1ZeovBIoEXcQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-jobs@2.19.0':
+    resolution: {integrity: sha512-FnGQmgiqCGzNt09QHg7FYz//t8/839ZugpYqapFmARGBFENeU2PLdfvY9OKN1w1dYV63g+FfPFbRex9hnpj42A==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-k8s@2.30.0':
+    resolution: {integrity: sha512-x4Uhk5xuY+EUcB2okLeL52yS3bxdbblT2ghPydDEpqk0lKkw5Q/ddjGpGxruP80xsIT68ISad2GfabV0OKWf5A==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-kafka@2.19.0':
+    resolution: {integrity: sha512-wMJvbN47ugrv013Nvy5FHn7UiqTMzRXYWhjHOCLlcXG6fGin4VKYymON5Izif5Sk7NmrFbSUvCLmcCn8RUYQUA==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-key-manager@2.23.0':
+    resolution: {integrity: sha512-DZ8TsrtStMxemrk8q4ekFGgVRPDEoIe+RRC78D+CMB1U0m2NplVeCej3xNS9cBn//eIhfLCy/8+kc1eowCBjiQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-lb@2.20.0':
+    resolution: {integrity: sha512-XAMvoofe4qu2dV+YBDAeQy1fMj/r7DmhLQ/tStKzQ3Dp7HnWN0ErB2wHfriZ3aloO4sraJkpNrRaIjtn6oCBLg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-mailbox@1.19.0':
+    resolution: {integrity: sha512-NqZVbPSSvKHko6VFgKdGDXIrfTheEi8ZMjomPZxTD53nmDJkaADPDAmZNSp8s3kA5kymTqXcUDP03qnh50MIPQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-marketplace@2.14.3':
+    resolution: {integrity: sha512-Ux4pAoWO4N5Ca5AB84BPOK0feelyzjn23mWMUBBx5/wnoz/5KdS7kpG1+1z7xNbUe4KKokFPpfuq14nxCIcnUw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-messageq@1.14.0':
+    resolution: {integrity: sha512-Pg7ZwL+naG1gMeYcS1NbVbH/vjhOhDnzc5o5p/J1Mpfcz+zl2fTygdUDGqSmu0cOHRDYzFEXHjc0Ta36TL0Swg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-mnq@2.17.0':
+    resolution: {integrity: sha512-WCcSVAvpljGhlysSvtRRGbZZjib4GoiG07TWtij7XNp51qTNtdky7u9EcM0S2jLssy+YOMbk/DggFTUcb4mS+A==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-mongodb@2.23.0':
+    resolution: {integrity: sha512-B1qEI8OXI1nIqlDF3E5vtwbvf7qPIaod7qhcSuFTc90eMyyQxetjUMhM2PhuqZu3A8ZuifRvtt7KNFiDd/JBeg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-partner@1.15.0':
+    resolution: {integrity: sha512-g4P50sMVOU3fCcymQBzUCeG/v8n86lpJoisCCIJErOTeSEG2TMOfSxsfYrVtQZ9pnXTkJVTpPQKrNo3UN7lqDQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-product-catalog@2.33.1':
+    resolution: {integrity: sha512-xnBnXpfSBBxdR0Hjue84t3a3FldJ/5sOvhUy4Gdz7RypQbn4uxm63Eui+6BvPJSeKcigJPGe5GZJW09u+UuKzg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-qaas@2.17.0':
+    resolution: {integrity: sha512-PuISCAevvyieErPcMXhxstiiVunGbJ+zt3nKFEhvLfBSU1Ei+SePbA3MlVZesBea2GaonE5sFYoYc8VjtZ/Dgg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-rdb@2.20.0':
+    resolution: {integrity: sha512-pfgvRcdXpVffM3M7Mv1VbkUG2sJGpoi3S0pL84vq1a6RYLALJW18CfJW3L6JkgH6v7MtxNKDuzt9exrUAGRSoQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-redis@2.18.0':
+    resolution: {integrity: sha512-5+NplGhHBSuFrPPRRVUYS0ArZknkaeP8wlkpJ8Xd0K0/MbO+zA5AdrzPN3d39kepgcIPK5eFObWNg32CyqAFIQ==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-registry@2.17.0':
+    resolution: {integrity: sha512-OHO+VDDdLtkuvMvbNO6aZezSfqRhD9W6UBeumXXuR0smrfmnNAGB4aAxACtm11K4QSpQ6x4m3mdBwWBfAvad8w==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-s2s-vpn@2.22.0':
+    resolution: {integrity: sha512-LaaqKJjrsHoNEu7PZlrmSIDtAx5NONSZ61bfrQ57vW0dzFl9arpGZTk9pSltbK9goopHDSxHKtJNgYCa1+rJRg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-search@1.19.0':
+    resolution: {integrity: sha512-E127y8QUVgJMivQNauhONGLxKvML6F0vQi5/6P+rpXkxNZpat/VdI2qt24om35tPsjlnDGrjNK9QbP/5xQLQug==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-searchdb@1.19.0':
+    resolution: {integrity: sha512-fh6pgik+K8F3i14+VDNOY74aG1FMxk6xSoQoXxForpM96WLrgBLANAGjW34Z1kn6O01AIsyFYHxmHnlK3+YCmA==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-secret@2.18.0':
+    resolution: {integrity: sha512-/P385Ol0Ipt3hJZUBoq/y1ydVAw9fpR2VP7AHNeciHBJBvKEnWDu2N2Mcf24DDkcknCsr4tWQxxk3l/4j5//sw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-serverless-sqldb@2.19.0':
+    resolution: {integrity: sha512-V7QZS0E5A92GDJu73mgDPRhaNxQyr9BwZPbyN221DePZjoCcjQA77i/hAQ7sHffjF+ds+PezjbElcVV0sY+ALg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-std@2.9.5':
+    resolution: {integrity: sha512-BajSiMBG+/vVDkXjKq2JfsIvrRcJQ5EJpsfpjXMHV9JhGBro0IAh3zawsgbcTrBLnu7E7fRw9els7TNgOXPdyw==}
+    peerDependencies:
+      '@scaleway/sdk-client': 2.16.0
+
+  '@scaleway/sdk-tem@2.17.0':
+    resolution: {integrity: sha512-JuHkXnWPHAQ4S/g+R7t+QVnLIHow5gTggFMGJfoUuRkbrKNLVEYkylDw3LX5+QM3TogqeP6dikS1iTnZWyRH+w==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-test@2.17.0':
+    resolution: {integrity: sha512-jZyRS7sdkaVsQr0aEl3PlJWHe/LUX0l90FYhgXtQaKYA7lC5SIziC9B7EfUYiHYxRyx5AlRXeXdtORplF/whMg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-vpc@2.22.0':
+    resolution: {integrity: sha512-6rxkOiIVgJrhB60boa0/ngj4V7qZo1/hDfkIjoJ/E9CXCSXSvYs62ZGK7YnEQn8+yG3uAguE/ZBGiUaALxAvBg==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-vpcgw@2.19.0':
+    resolution: {integrity: sha512-7QoxRQvhv0FN2OQpU0d0ZYAj1Gvr31pkP4z6t2b6br2nqTugjJLaJyaHlZF1th2k8mGMTNiv7KhLy1ePPJ/4WA==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk-webhosting@2.24.0':
+    resolution: {integrity: sha512-Cy4b3iv/yMfkYHHIDhw4cTBaaoSuQJC8wnzDfcRREtYCD+TzHP6Qvm1hTkv2H1/zsRL9VJ9Bf1KEd7QoIvGexw==}
+    peerDependencies:
+      '@scaleway/sdk-client': ^2.16.0
+
+  '@scaleway/sdk@4.2.8':
+    resolution: {integrity: sha512-I6N+JCyE4mhHCfk/1s52Mc0VCg53boOWTn/RQu6k4N7n9f5NEDwDxLdOv6h5Yqa9sIoP2CuiTVebc75W3AdfEA==}
+
+  accepts@2.0.0:
+    resolution: {integrity: sha512-5cvg6CtKwfgdmVqY1WIiXKc3Q1bkRqGLi+2W/6ao+6Y7gu/RCwRuAhGEzh5B4KlszSuTLgZYuqFqo5bImjNKng==}
+    engines: {node: '>= 0.6'}
+
+  ajv-formats@3.0.1:
+    resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==}
+    peerDependencies:
+      ajv: ^8.0.0
+    peerDependenciesMeta:
+      ajv:
+        optional: true
+
+  ajv@8.20.0:
+    resolution: {integrity: sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==}
+
+  body-parser@2.4.0:
+    resolution: {integrity: sha512-Ifk1KcLrxaGt1occQagQNFNNOqRt1LFuehEnHHzB8Z6cRgIxRU1TBaiIsUiCdA+gy5PL7Y1IX31DNKkRmxtXjQ==}
+    engines: {node: '>=18'}
+
+  bytes@3.1.2:
+    resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
+    engines: {node: '>= 0.8'}
+
+  call-bind-apply-helpers@1.0.2:
+    resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
+    engines: {node: '>= 0.4'}
+
+  call-bound@1.0.4:
+    resolution: {integrity: sha512-+ys997U96po4Kx/ABpBCqhA9EuxJaQWDQg7295H4hBphv3IZg0boBKuwYpt4YXp6MZ5AmZQnU/tyMTlRpaSejg==}
+    engines: {node: '>= 0.4'}
+
+  content-disposition@2.0.1:
+    resolution: {integrity: sha512-e+H0ZXHSWYrENhQzw1LPuP4oF5MzVKmDU6d3hxlvaPEYLLg62MxtQNPRx4SYSuYJSBUgnQIG4HIN2tEtNv7Dog==}
+    engines: {node: '>=18'}
+
+  content-type@1.0.5:
+    resolution: {integrity: sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==}
+    engines: {node: '>= 0.6'}
+
+  content-type@2.1.0:
+    resolution: {integrity: sha512-mj7UPXE0jaqaOsukNZRUEfEi2AcL7C/vwmwcHV0O97eO1E1pxBZuyjlZrx5seTaNBg1U6+o35wpa35Qfcc+7ag==}
+    engines: {node: '>=18'}
+
+  cookie-signature@1.2.2:
+    resolution: {integrity: sha512-D76uU73ulSXrD1UXF4KE2TMxVVwhsnCgfAyTg9k8P6KGZjlXKrOLe4dJQKI3Bxi5wjesZoFXJWElNWBjPZMbhg==}
+    engines: {node: '>=6.6.0'}
+
+  cookie@0.7.2:
+    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
+    engines: {node: '>= 0.6'}
+
+  cors@2.8.6:
+    resolution: {integrity: sha512-tJtZBBHA6vjIAaF6EnIaq6laBBP9aq/Y3ouVJjEfoHbRBcHBAHYcMh/w8LDrk2PvIMMq8gmopa5D4V8RmbrxGw==}
+    engines: {node: '>= 0.10'}
+
+  cross-spawn@7.0.6:
+    resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
+    engines: {node: '>= 8'}
+
+  debug@4.4.3:
+    resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
+  depd@2.0.0:
+    resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
+    engines: {node: '>= 0.8'}
+
+  dunder-proto@1.0.1:
+    resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
+    engines: {node: '>= 0.4'}
+
+  ee-first@1.1.1:
+    resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
+
+  encodeurl@2.0.1:
+    resolution: {integrity: sha512-Ev/hIyePLZtpL98x562lvPtenrUfGr0lfaf44HFZ+hDEwso7ccV9QAZrEVLg0hxNAzygaAFxy2dYaAKKM0G06A==}
+    engines: {node: '>= 0.8'}
+
+  es-define-property@1.0.1:
+    resolution: {integrity: sha512-e3nRfgfUZ4rNGL232gUgX06QNyyez04KdjFrF+LTRoOXmrOgFKDg4BCdsjW8EnT69eqdYGmRpJwiPVYNrCaW3g==}
+    engines: {node: '>= 0.4'}
+
+  es-errors@1.3.0:
+    resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
+    engines: {node: '>= 0.4'}
+
+  es-object-atoms@1.1.2:
+    resolution: {integrity: sha512-HWcBoN6NileqtSydK2FqHbS/LoDd2pqrnQHLyJzBj4kOp/ky2MWMN694xOfkK8/SnUsW2DH7EfyVlydKCsm1Zw==}
+    engines: {node: '>= 0.4'}
+
+  escape-html@1.0.3:
+    resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
+
+  etag@1.8.1:
+    resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
+    engines: {node: '>= 0.6'}
+
+  eventsource-parser@3.1.1:
+    resolution: {integrity: sha512-EKN1vKAMcZ8MlYMpaNuxN6R9yakzH6uajHcHVTqWJzvu5pWw9DyhbP35HH8MVBQ+dZjAfDxk+A8NiR9KWaXiyQ==}
+    engines: {node: '>=18.0.0'}
+
+  eventsource@3.0.7:
+    resolution: {integrity: sha512-CRT1WTyuQoD771GW56XEZFQ/ZoSfWid1alKGDYMmkt2yl8UXrVR4pspqWNEcqKvVIzg6PAltWjxcSSPrboA4iA==}
+    engines: {node: '>=18.0.0'}
+
+  express-rate-limit@8.7.3:
+    resolution: {integrity: sha512-zPLqDI2f0gV2WmGnacLf9XSSqn4VldRyP5LCzOwx0BKH40mO6+2PCFkoSsRO2jePx87/Kf6NUF6P2QOTKXHbQA==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      express: '>= 4.11'
+
+  express@5.3.0:
+    resolution: {integrity: sha512-qCqy1xSoaugxOD4IVHb1ZWdkvCF2W3aE2okKouWj8VwJ+ztskSiXoBnCSJqfKT+cVPJhuJqe9YLbY425+Zh00g==}
+    engines: {node: '>= 18'}
+
+  fast-deep-equal@3.1.3:
+    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+
+  fast-uri@3.1.9:
+    resolution: {integrity: sha512-hS/0Wt3Ya043oKXs0sIxrMpKQITXhMLIrVAKKXi4gozGC9v7YRWVnXIZzjNPTO02M9BdxLCWqK1yRXgNziVyJQ==}
+
+  finalhandler@2.1.1:
+    resolution: {integrity: sha512-S8KoZgRZN+a5rNwqTxlZZePjT/4cnm0ROV70LedRHZ0p8u9fRID0hJUZQpkKLzro8LfmC8sx23bY6tVNxv8pQA==}
+    engines: {node: '>= 18.0.0'}
+
+  forwarded@0.2.0:
+    resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
+    engines: {node: '>= 0.6'}
+
+  fresh@2.0.0:
+    resolution: {integrity: sha512-Rx/WycZ60HOaqLKAi6cHRKKI7zxWbJ31MhntmtwMoaTeF7XFH9hhBp8vITaMidfljRQ6eYWCKkaTK+ykVJHP2A==}
+    engines: {node: '>= 0.8'}
+
+  function-bind@1.1.2:
+    resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
+
+  get-intrinsic@1.3.0:
+    resolution: {integrity: sha512-9fSjSaos/fRIVIp+xSJlE6lfwhES7LNtKaCBIamHsjr2na1BiABJPo0mOjjz8GJDURarmCPGqaiVg5mfjb98CQ==}
+    engines: {node: '>= 0.4'}
+
+  get-proto@1.0.1:
+    resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
+    engines: {node: '>= 0.4'}
+
+  gopd@1.2.0:
+    resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
+    engines: {node: '>= 0.4'}
+
+  has-symbols@1.1.0:
+    resolution: {integrity: sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ==}
+    engines: {node: '>= 0.4'}
+
+  hasown@2.0.4:
+    resolution: {integrity: sha512-T2UbfbBEF32wiepXIsMlTW9+dDYC6wMh/t/vYA4tuOMKqWz/n3vr1NFSxQiyP+zk2mXsoMA/i/7qV6LKut1t1A==}
+    engines: {node: '>= 0.4'}
+
+  hono@4.13.16:
+    resolution: {integrity: sha512-AOLOEhvrV+iH92xXCnFr/5+3KjPKcI3xP63XJtX5spAnkznPdHijlIsUTpi7/9EhWqrTCekw5c5zh1K+YsVw7A==}
+    engines: {node: '>=16.9.0'}
+
+  http-errors@2.0.1:
+    resolution: {integrity: sha512-4FbRdAX+bSdmo4AUFuS0WNiPz8NgFt+r8ThgNWmlrjQjt1Q7ZR9+zTlce2859x4KSXrwIsaeTqDoKQmtP8pLmQ==}
+    engines: {node: '>= 0.8'}
+
+  iconv-lite@0.7.3:
+    resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
+    engines: {node: '>=0.10.0'}
+
+  inherits@2.0.4:
+    resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+
+  ip-address@10.7.5:
+    resolution: {integrity: sha512-t2v0rkILYv9WXmSL7TpAaU3HXgaFYOPUcH3QHgwQ++gpJuH3bqyMy4Fvt/DJCTKwzH3Cf+bAp5W/mFL39KPLzA==}
+    engines: {node: '>= 12'}
+
+  ipaddr.js@1.9.1:
+    resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==}
+    engines: {node: '>= 0.10'}
+
+  is-promise@4.0.0:
+    resolution: {integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==}
+
+  isexe@2.0.0:
+    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+
+  jose@6.2.15:
+    resolution: {integrity: sha512-qdF6ewcZARtef63fJ9AKKZPgxw+t7USH6HLXYcD4CrdmSvDp79rpJSPFEKc90QBeGS63u1KQtN2MZQHC0yDIzA==}
+
+  json-schema-traverse@1.0.0:
+    resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
+
+  json-schema-typed@8.0.2:
+    resolution: {integrity: sha512-fQhoXdcvc3V28x7C7BMs4P5+kNlgUURe2jmUT1T//oBRMDrqy1QPelJimwZGo7Hg9VPV3EQV5Bnq4hbFy2vetA==}
+
+  math-intrinsics@1.1.0:
+    resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
+    engines: {node: '>= 0.4'}
+
+  media-typer@1.1.1:
+    resolution: {integrity: sha512-yz3xRaG20c6/BOzvYoDaGtPmGscs7YivItZEEqe6GbwNfHuxu9YNmvnEkMzKldAGY4/80pRcQRZSEnhquk9XuQ==}
+    engines: {node: '>= 0.8'}
+
+  merge-descriptors@2.0.0:
+    resolution: {integrity: sha512-Snk314V5ayFLhp3fkUREub6WtjBfPdCPY1Ln8/8munuLuiYhsABgBVWsozAG+MWMbVEvcdcpbi9R7ww22l9Q3g==}
+    engines: {node: '>=18'}
+
+  mime-db@1.54.0:
+    resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
+    engines: {node: '>= 0.6'}
+
+  mime-types@3.0.2:
+    resolution: {integrity: sha512-Lbgzdk0h4juoQ9fCKXW4by0UJqj+nOOrI9MJ1sSj4nI8aI2eo1qmvQEie4VD1glsS250n15LsWsYtCugiStS5A==}
+    engines: {node: '>=18'}
+
+  ms@2.1.3:
+    resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  negotiator@1.1.0:
+    resolution: {integrity: sha512-NMPBRMJgiQHjbd8phG3Vebdx4kZ1H121rbl5IkMqeOsahptB9BKo/d7oJ3zTXqTgagn2bWlNSXkh0QUGM31RYg==}
+    engines: {node: '>=18'}
+
+  object-assign@4.1.1:
+    resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
+    engines: {node: '>=0.10.0'}
+
+  object-inspect@1.13.4:
+    resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
+    engines: {node: '>= 0.4'}
+
+  on-finished@2.4.2:
+    resolution: {integrity: sha512-ATWUv387i+nLD49EiDoOft5scf32Vsdz3ktrQJG9bi7jRFmaXTssvyvj1EmeKVVgvesbqUtvQQvaS2TpTukAZQ==}
+    engines: {node: '>= 0.8'}
+
+  once@1.4.0:
+    resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
+
+  parseurl@1.3.3:
+    resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
+    engines: {node: '>= 0.8'}
+
+  path-key@3.1.1:
+    resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
+    engines: {node: '>=8'}
+
+  path-to-regexp@8.4.2:
+    resolution: {integrity: sha512-qRcuIdP69NPm4qbACK+aDogI5CBDMi1jKe0ry5rSQJz8JVLsC7jV8XpiJjGRLLol3N+R5ihGYcrPLTno6pAdBA==}
+
+  pkce-challenge@5.0.1:
+    resolution: {integrity: sha512-wQ0b/W4Fr01qtpHlqSqspcj3EhBvimsdh0KlHhH8HRZnMsEa0ea2fTULOXOS9ccQr3om+GcGRk4e+isrZWV8qQ==}
+    engines: {node: '>=16.20.0'}
+
+  proxy-addr@2.0.8:
+    resolution: {integrity: sha512-5nnx0yGyVUcY6t9RnWcARWtwT9F1D8O9rt08htPvnd49W1IgZtmLkhu9WfMzQj1cFxjHIO6connUNVW5k7AVyQ==}
+    engines: {node: '>= 0.10'}
+
+  qs@6.17.1:
+    resolution: {integrity: sha512-jd3COkaKVgGUW+ZHyEHCG9bH7RoaaiWuMgzsIBjUMVjLAaWGWpoUAVwljVvBHxRu/2qEHnadLGZrkutYUBPQJA==}
+    engines: {node: '>=0.6'}
+
+  range-parser@1.3.0:
+    resolution: {integrity: sha512-hek2mFQpPuI4E1BBKrSto+BU3e3x4xuarsbiwr3+lf7p44juvFMV0XFWQAP3xUyqXA4RrXLIoaSUGbSt056ZMw==}
+    engines: {node: '>= 0.6'}
+
+  raw-body@3.0.2:
+    resolution: {integrity: sha512-K5zQjDllxWkf7Z5xJdV0/B0WTNqx6vxG70zJE4N0kBs4LovmEYWJzQGxC9bS9RAKu3bgM40lrd5zoLJ12MQ5BA==}
+    engines: {node: '>= 0.10'}
+
+  require-from-string@2.0.2:
+    resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
+    engines: {node: '>=0.10.0'}
+
+  router@2.2.0:
+    resolution: {integrity: sha512-nLTrUKm2UyiL7rlhapu/Zl45FwNgkZGaCpZbIHajDYgwlJCOzLSk+cIPAnsEqV955GjILJnKbdQC1nVPz+gAYQ==}
+    engines: {node: '>= 18'}
+
+  safer-buffer@2.1.2:
+    resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+
+  send@1.2.1:
+    resolution: {integrity: sha512-1gnZf7DFcoIcajTjTwjwuDjzuz4PPcY2StKPlsGAQ1+YH20IRVrBaXSWmdjowTJ6u8Rc01PoYOGHXfP1mYcZNQ==}
+    engines: {node: '>= 18'}
+
+  serve-static@2.2.1:
+    resolution: {integrity: sha512-xRXBn0pPqQTVQiC8wyQrKs2MOlX24zQ0POGaj0kultvoOCstBQM5yvOhAVSUwOMjQtTvsPWoNCHfPGwaaQJhTw==}
+    engines: {node: '>= 18'}
+
+  setprototypeof@1.2.0:
+    resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
+
+  shebang-command@2.0.0:
+    resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
+    engines: {node: '>=8'}
+
+  shebang-regex@3.0.0:
+    resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
+    engines: {node: '>=8'}
+
+  side-channel-list@1.0.1:
+    resolution: {integrity: sha512-mjn/0bi/oUURjc5Xl7IaWi/OJJJumuoJFQJfDDyO46+hBWsfaVM65TBHq2eoZBhzl9EchxOijpkbRC8SVBQU0w==}
+    engines: {node: '>= 0.4'}
+
+  side-channel-map@1.0.1:
+    resolution: {integrity: sha512-VCjCNfgMsby3tTdo02nbjtM/ewra6jPHmpThenkTYh8pG9ucZ/1P8So4u4FGBek/BjpOVsDCMoLA/iuBKIFXRA==}
+    engines: {node: '>= 0.4'}
+
+  side-channel-weakmap@1.0.2:
+    resolution: {integrity: sha512-WPS/HvHQTYnHisLo9McqBHOJk2FkHO/tlpvldyrnem4aeQp4hai3gythswg6p01oSoTl58rcpiFAjF2br2Ak2A==}
+    engines: {node: '>= 0.4'}
+
+  side-channel@1.1.1:
+    resolution: {integrity: sha512-6x6dK6zJdpTzF4sQeNYxwtvBzf6Eg4GtlesS94HOvTudUeyK2WXAaIfmDgsyslYrRBeFIlsi54AYsFGUuhmvrQ==}
+    engines: {node: '>= 0.4'}
+
+  statuses@2.0.2:
+    resolution: {integrity: sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw==}
+    engines: {node: '>= 0.8'}
+
+  toidentifier@1.0.1:
+    resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
+    engines: {node: '>=0.6'}
+
+  type-is@2.1.0:
+    resolution: {integrity: sha512-faYHw0anBbc/kWF3zFTEnxSFOAGUX9GFbOBthvDdLsIlEoWOFOtS0zgCiQYwIskL9iGXZL3kAXD8OoZ4GmMATA==}
+    engines: {node: '>= 18'}
+
+  unpipe@1.0.0:
+    resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
+    engines: {node: '>= 0.8'}
+
+  vary@1.1.2:
+    resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
+    engines: {node: '>= 0.8'}
+
+  which@2.0.2:
+    resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
+    engines: {node: '>= 8'}
+    hasBin: true
+
+  wrappy@1.0.2:
+    resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+
+  zod-to-json-schema@3.25.2:
+    resolution: {integrity: sha512-O/PgfnpT1xKSDeQYSCfRI5Gy3hPf91mKVDuYLUHZJMiDFptvP41MSnWofm8dnCm0256ZNfZIM7DSzuSMAFnjHA==}
+    peerDependencies:
+      zod: ^3.25.28 || ^4
+
+  zod@4.6.7:
+    resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
+
+snapshots:
+
+  '@hono/node-server@2.1.6(hono@4.13.16)':
+    dependencies:
+      hono: 4.13.16
+
+  '@modelcontextprotocol/sdk@1.32.2(zod@4.6.7)':
+    dependencies:
+      '@hono/node-server': 2.1.6(hono@4.13.16)
+      ajv: 8.20.0
+      ajv-formats: 3.0.1
+      content-type: 1.0.5
+      cors: 2.8.6
+      cross-spawn: 7.0.6
+      eventsource: 3.0.7
+      eventsource-parser: 3.1.1
+      express: 5.3.0
+      express-rate-limit: 8.7.3(express@5.3.0)
+      hono: 4.13.16
+      jose: 6.2.15
+      json-schema-typed: 8.0.2
+      pkce-challenge: 5.0.1
+      raw-body: 3.0.2
+      zod: 4.6.7
+      zod-to-json-schema: 3.25.2(zod@4.6.7)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@scaleway/random-name@6.0.2': {}
+
+  '@scaleway/sdk-account@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-annotations@1.12.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-applesilicon@2.20.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-audit-trail@2.34.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-autoscaling@2.18.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-baremetal@2.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-billing@2.21.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-block@2.22.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-client@2.16.0': {}
+
+  '@scaleway/sdk-cockpit@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-container@2.22.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-datalab@1.16.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-dataviz@1.13.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-datawarehouse@2.23.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-dedibox@2.22.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-domain@2.20.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-edge-services@2.28.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-environmental-footprint@2.23.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-file@2.20.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-flexibleip@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-function@2.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-iam@2.22.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-inference@2.21.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-instance@2.27.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-interlink@2.18.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-iot@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-ipam@2.21.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-jobs@2.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-k8s@2.30.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-kafka@2.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-key-manager@2.23.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-lb@2.20.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-mailbox@1.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-marketplace@2.14.3(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-messageq@1.14.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-mnq@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-mongodb@2.23.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-partner@1.15.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-product-catalog@2.33.1(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-qaas@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-rdb@2.20.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-redis@2.18.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-registry@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-s2s-vpn@2.22.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-search@1.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-searchdb@1.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-secret@2.18.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-serverless-sqldb@2.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-std@2.9.5(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/sdk-client': 2.16.0
+
+  '@scaleway/sdk-tem@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-test@2.17.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-vpc@2.22.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-vpcgw@2.19.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk-webhosting@2.24.0(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/random-name': 6.0.2
+      '@scaleway/sdk-client': 2.16.0
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+
+  '@scaleway/sdk@4.2.8(@scaleway/sdk-client@2.16.0)':
+    dependencies:
+      '@scaleway/sdk-account': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-annotations': 1.12.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-applesilicon': 2.20.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-audit-trail': 2.34.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-autoscaling': 2.18.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-baremetal': 2.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-billing': 2.21.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-block': 2.22.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-cockpit': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-container': 2.22.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-datalab': 1.16.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-dataviz': 1.13.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-datawarehouse': 2.23.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-dedibox': 2.22.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-domain': 2.20.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-edge-services': 2.28.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-environmental-footprint': 2.23.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-file': 2.20.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-flexibleip': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-function': 2.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-iam': 2.22.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-inference': 2.21.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-instance': 2.27.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-interlink': 2.18.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-iot': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-ipam': 2.21.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-jobs': 2.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-k8s': 2.30.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-kafka': 2.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-key-manager': 2.23.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-lb': 2.20.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-mailbox': 1.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-marketplace': 2.14.3(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-messageq': 1.14.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-mnq': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-mongodb': 2.23.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-partner': 1.15.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-product-catalog': 2.33.1(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-qaas': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-rdb': 2.20.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-redis': 2.18.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-registry': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-s2s-vpn': 2.22.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-search': 1.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-searchdb': 1.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-secret': 2.18.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-serverless-sqldb': 2.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-std': 2.9.5(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-tem': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-test': 2.17.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-vpc': 2.22.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-vpcgw': 2.19.0(@scaleway/sdk-client@2.16.0)
+      '@scaleway/sdk-webhosting': 2.24.0(@scaleway/sdk-client@2.16.0)
+    transitivePeerDependencies:
+      - '@scaleway/sdk-client'
+
+  accepts@2.0.0:
+    dependencies:
+      mime-types: 3.0.2
+      negotiator: 1.1.0
+
+  ajv-formats@3.0.1:
+    dependencies:
+      ajv: 8.20.0
+
+  ajv@8.20.0:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-uri: 3.1.9
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
+
+  body-parser@2.4.0:
+    dependencies:
+      bytes: 3.1.2
+      content-type: 2.1.0
+      debug: 4.4.3
+      http-errors: 2.0.1
+      iconv-lite: 0.7.3
+      on-finished: 2.4.2
+      qs: 6.17.1
+      raw-body: 3.0.2
+      type-is: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+
+  bytes@3.1.2: {}
+
+  call-bind-apply-helpers@1.0.2:
+    dependencies:
+      es-errors: 1.3.0
+      function-bind: 1.1.2
+
+  call-bound@1.0.4:
+    dependencies:
+      call-bind-apply-helpers: 1.0.2
+      get-intrinsic: 1.3.0
+
+  content-disposition@2.0.1: {}
+
+  content-type@1.0.5: {}
+
+  content-type@2.1.0: {}
+
+  cookie-signature@1.2.2: {}
+
+  cookie@0.7.2: {}
+
+  cors@2.8.6:
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
+
+  cross-spawn@7.0.6:
+    dependencies:
+      path-key: 3.1.1
+      shebang-command: 2.0.0
+      which: 2.0.2
+
+  debug@4.4.3:
+    dependencies:
+      ms: 2.1.3
+
+  depd@2.0.0: {}
+
+  dunder-proto@1.0.1:
+    dependencies:
+      call-bind-apply-helpers: 1.0.2
+      es-errors: 1.3.0
+      gopd: 1.2.0
+
+  ee-first@1.1.1: {}
+
+  encodeurl@2.0.1: {}
+
+  es-define-property@1.0.1: {}
+
+  es-errors@1.3.0: {}
+
+  es-object-atoms@1.1.2:
+    dependencies:
+      es-errors: 1.3.0
+
+  escape-html@1.0.3: {}
+
+  etag@1.8.1: {}
+
+  eventsource-parser@3.1.1: {}
+
+  eventsource@3.0.7:
+    dependencies:
+      eventsource-parser: 3.1.1
+
+  express-rate-limit@8.7.3(express@5.3.0):
+    dependencies:
+      debug: 4.4.3
+      express: 5.3.0
+      ip-address: 10.7.5
+    transitivePeerDependencies:
+      - supports-color
+
+  express@5.3.0:
+    dependencies:
+      accepts: 2.0.0
+      body-parser: 2.4.0
+      content-disposition: 2.0.1
+      content-type: 2.1.0
+      cookie: 0.7.2
+      cookie-signature: 1.2.2
+      debug: 4.4.3
+      depd: 2.0.0
+      encodeurl: 2.0.1
+      escape-html: 1.0.3
+      etag: 1.8.1
+      finalhandler: 2.1.1
+      fresh: 2.0.0
+      http-errors: 2.0.1
+      merge-descriptors: 2.0.0
+      mime-types: 3.0.2
+      on-finished: 2.4.2
+      once: 1.4.0
+      parseurl: 1.3.3
+      proxy-addr: 2.0.8
+      qs: 6.17.1
+      range-parser: 1.3.0
+      router: 2.2.0
+      send: 1.2.1
+      serve-static: 2.2.1
+      statuses: 2.0.2
+      type-is: 2.1.0
+      vary: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
+
+  fast-deep-equal@3.1.3: {}
+
+  fast-uri@3.1.9: {}
+
+  finalhandler@2.1.1:
+    dependencies:
+      debug: 4.4.3
+      encodeurl: 2.0.1
+      escape-html: 1.0.3
+      on-finished: 2.4.2
+      parseurl: 1.3.3
+      statuses: 2.0.2
+    transitivePeerDependencies:
+      - supports-color
+
+  forwarded@0.2.0: {}
+
+  fresh@2.0.0: {}
+
+  function-bind@1.1.2: {}
+
+  get-intrinsic@1.3.0:
+    dependencies:
+      call-bind-apply-helpers: 1.0.2
+      es-define-property: 1.0.1
+      es-errors: 1.3.0
+      es-object-atoms: 1.1.2
+      function-bind: 1.1.2
+      get-proto: 1.0.1
+      gopd: 1.2.0
+      has-symbols: 1.1.0
+      hasown: 2.0.4
+      math-intrinsics: 1.1.0
+
+  get-proto@1.0.1:
+    dependencies:
+      dunder-proto: 1.0.1
+      es-object-atoms: 1.1.2
+
+  gopd@1.2.0: {}
+
+  has-symbols@1.1.0: {}
+
+  hasown@2.0.4:
+    dependencies:
+      function-bind: 1.1.2
+
+  hono@4.13.16: {}
+
+  http-errors@2.0.1:
+    dependencies:
+      depd: 2.0.0
+      inherits: 2.0.4
+      setprototypeof: 1.2.0
+      statuses: 2.0.2
+      toidentifier: 1.0.1
+
+  iconv-lite@0.7.3:
+    dependencies:
+      safer-buffer: 2.1.2
+
+  inherits@2.0.4: {}
+
+  ip-address@10.7.5: {}
+
+  ipaddr.js@1.9.1: {}
+
+  is-promise@4.0.0: {}
+
+  isexe@2.0.0: {}
+
+  jose@6.2.15: {}
+
+  json-schema-traverse@1.0.0: {}
+
+  json-schema-typed@8.0.2: {}
+
+  math-intrinsics@1.1.0: {}
+
+  media-typer@1.1.1: {}
+
+  merge-descriptors@2.0.0: {}
+
+  mime-db@1.54.0: {}
+
+  mime-types@3.0.2:
+    dependencies:
+      mime-db: 1.54.0
+
+  ms@2.1.3: {}
+
+  negotiator@1.1.0:
+    dependencies:
+      content-type: 2.1.0
+
+  object-assign@4.1.1: {}
+
+  object-inspect@1.13.4: {}
+
+  on-finished@2.4.2:
+    dependencies:
+      ee-first: 1.1.1
+
+  once@1.4.0:
+    dependencies:
+      wrappy: 1.0.2
+
+  parseurl@1.3.3: {}
+
+  path-key@3.1.1: {}
+
+  path-to-regexp@8.4.2: {}
+
+  pkce-challenge@5.0.1: {}
+
+  proxy-addr@2.0.8:
+    dependencies:
+      forwarded: 0.2.0
+      ipaddr.js: 1.9.1
+
+  qs@6.17.1:
+    dependencies:
+      es-define-property: 1.0.1
+      side-channel: 1.1.1
+
+  range-parser@1.3.0: {}
+
+  raw-body@3.0.2:
+    dependencies:
+      bytes: 3.1.2
+      http-errors: 2.0.1
+      iconv-lite: 0.7.3
+      unpipe: 1.0.0
+
+  require-from-string@2.0.2: {}
+
+  router@2.2.0:
+    dependencies:
+      debug: 4.4.3
+      depd: 2.0.0
+      is-promise: 4.0.0
+      parseurl: 1.3.3
+      path-to-regexp: 8.4.2
+    transitivePeerDependencies:
+      - supports-color
+
+  safer-buffer@2.1.2: {}
+
+  send@1.2.1:
+    dependencies:
+      debug: 4.4.3
+      encodeurl: 2.0.1
+      escape-html: 1.0.3
+      etag: 1.8.1
+      fresh: 2.0.0
+      http-errors: 2.0.1
+      mime-types: 3.0.2
+      ms: 2.1.3
+      on-finished: 2.4.2
+      range-parser: 1.3.0
+      statuses: 2.0.2
+    transitivePeerDependencies:
+      - supports-color
+
+  serve-static@2.2.1:
+    dependencies:
+      encodeurl: 2.0.1
+      escape-html: 1.0.3
+      parseurl: 1.3.3
+      send: 1.2.1
+    transitivePeerDependencies:
+      - supports-color
+
+  setprototypeof@1.2.0: {}
+
+  shebang-command@2.0.0:
+    dependencies:
+      shebang-regex: 3.0.0
+
+  shebang-regex@3.0.0: {}
+
+  side-channel-list@1.0.1:
+    dependencies:
+      es-errors: 1.3.0
+      object-inspect: 1.13.4
+
+  side-channel-map@1.0.1:
+    dependencies:
+      call-bound: 1.0.4
+      es-errors: 1.3.0
+      get-intrinsic: 1.3.0
+      object-inspect: 1.13.4
+
+  side-channel-weakmap@1.0.2:
+    dependencies:
+      call-bound: 1.0.4
+      es-errors: 1.3.0
+      get-intrinsic: 1.3.0
+      object-inspect: 1.13.4
+      side-channel-map: 1.0.1
+
+  side-channel@1.1.1:
+    dependencies:
+      es-errors: 1.3.0
+      object-inspect: 1.13.4
+      side-channel-list: 1.0.1
+      side-channel-map: 1.0.1
+      side-channel-weakmap: 1.0.2
+
+  statuses@2.0.2: {}
+
+  toidentifier@1.0.1: {}
+
+  type-is@2.1.0:
+    dependencies:
+      content-type: 2.1.0
+      media-typer: 1.1.1
+      mime-types: 3.0.2
+
+  unpipe@1.0.0: {}
+
+  vary@1.1.2: {}
+
+  which@2.0.2:
+    dependencies:
+      isexe: 2.0.0
+
+  wrappy@1.0.2: {}
+
+  zod-to-json-schema@3.25.2(zod@4.6.7):
+    dependencies:
+      zod: 4.6.7
+
+  zod@4.6.7: {}
