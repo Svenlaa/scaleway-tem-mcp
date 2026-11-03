@@ -2,8 +2,8 @@
 /**
  * tem-mcp — MCP server for Scaleway Transactional Email (TEM)
  *
- * Lets MCP consumers send emails from any address @ai.svenlaa.eu
- * (configurable via TEM_SENDING_DOMAIN).
+ * Lets MCP consumers send emails from any address on the configured
+ * sending domain (TEM_SENDING_DOMAIN).
  *
  * Runs on Node.js 26+ with native TypeScript type stripping — no build step.
  *
@@ -22,7 +22,7 @@
  *   MCP_HOST            — HTTP bind address (default: 127.0.0.1)
  *   MCP_PORT            — HTTP port (default: 3000)
  *   SCW_DEFAULT_REGION  — default region (default: fr-par)
- *   TEM_SENDING_DOMAIN  — sending domain (default: ai.svenlaa.eu)
+ *   TEM_SENDING_DOMAIN  — sending domain (required)
  */
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { timingSafeEqual } from 'node:crypto';

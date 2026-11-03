@@ -1,6 +1,6 @@
 # tem-mcp
 
-MCP (Model Context Protocol) server for [Scaleway Transactional Email (TEM)](https://www.scaleway.com/en/transactional-email/). Lets MCP consumers send emails from **any address @ `ai.svenlaa.eu`** (configurable).
+MCP (Model Context Protocol) server for [Scaleway Transactional Email (TEM)](https://www.scaleway.com/en/transactional-email/). Lets MCP consumers send emails from **any address on your configured sending domain** (`TEM_SENDING_DOMAIN`).
 
 Built for **Node.js 26+** — runs TypeScript natively with zero build step, uses built-in `node:test` and `process.loadEnvFile`. Only 3 runtime dependencies.
 
@@ -8,7 +8,7 @@ Built for **Node.js 26+** — runs TypeScript natively with zero build step, use
 
 | Tool | Description |
 |---|---|
-| `send_email` | Send an email from any `local@ai.svenlaa.eu` address. `from` accepts a bare local part (`"noreply"`) or full address — always resolved to the configured domain. |
+| `send_email` | Send an email from any `local@your-domain` address. `from` accepts a bare local part (`"noreply"`) or full address — always resolved to the configured domain. |
 | `list_emails` | List sent emails, filterable by domain. |
 | `get_email` | Get full details of an email by ID. |
 | `get_statistics` | Sending statistics (sent, delivered, bounced, …). |
@@ -27,7 +27,7 @@ Built for **Node.js 26+** — runs TypeScript natively with zero build step, use
 | `MCP_HOST` | no | `127.0.0.1` | HTTP bind address |
 | `MCP_PORT` | no | `3000` | HTTP port |
 | `SCW_DEFAULT_REGION` | no | `fr-par` | Default region |
-| `TEM_SENDING_DOMAIN` | no | `ai.svenlaa.eu` | Domain for sender addresses |
+| `TEM_SENDING_DOMAIN` | yes | — | Domain for sender addresses, e.g. `example.com` |
 
 A `.env` file in the working directory is loaded automatically via `process.loadEnvFile()`.
 
@@ -89,7 +89,7 @@ listens on plain HTTP on localhost.
 }
 ```
 
-This sends from `noreply@ai.svenlaa.eu`.
+This sends from `noreply@example.com` (with `TEM_SENDING_DOMAIN=example.com`).
 
 ## Architecture
 

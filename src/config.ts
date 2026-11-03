@@ -12,7 +12,7 @@ export interface TemMcpConfig {
     secretKey: string;
     projectId: string;
     region: string;
-    /** The domain from which emails can be sent, e.g. "ai.svenlaa.eu" */
+    /** The domain from which emails can be sent, e.g. "example.com" */
     sendingDomain: string;
     /** Transport mode: "http" (default) or "stdio" */
     transport: 'http' | 'stdio';
@@ -53,7 +53,7 @@ export function loadConfig(): TemMcpConfig {
         secretKey: required('SCW_SECRET_KEY'),
         projectId: required('SCW_PROJECT_ID', 'SCW_DEFAULT_PROJECT_ID'),
         region: optional('SCW_DEFAULT_REGION', 'fr-par'),
-        sendingDomain: optional('TEM_SENDING_DOMAIN', 'ai.svenlaa.eu'),
+        sendingDomain: required('TEM_SENDING_DOMAIN'),
         transport: process.env.MCP_TRANSPORT === 'stdio' ? 'stdio' : 'http',
         host: optional('MCP_HOST', '127.0.0.1'),
         port: portOrDefault(process.env.MCP_PORT),

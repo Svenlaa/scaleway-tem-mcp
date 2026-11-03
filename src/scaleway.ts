@@ -23,7 +23,7 @@ export class TemClient {
 
     /**
      * Normalize a sender address: accepts either a bare local part
-     * ("noreply") or a full email ("noreply@ai.svenlaa.eu") and always
+     * ("noreply") or a full email ("noreply@example.com") and always
      * returns a full address at the configured sending domain.
      */
     resolveSender(from: string, fromName?: string): Temv1alpha1.CreateEmailRequestAddress {

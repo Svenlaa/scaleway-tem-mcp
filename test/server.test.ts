@@ -14,7 +14,7 @@ function makeConfig(overrides: Partial<TemMcpConfig> = {}): TemMcpConfig {
         secretKey: '11111111-1111-1111-1111-111111111111',
         projectId: '11111111-1111-1111-1111-111111111111',
         region: 'fr-par',
-        sendingDomain: 'ai.svenlaa.eu',
+        sendingDomain: 'example.com',
         transport: 'stdio',
         host: '127.0.0.1',
         port: 3000,
@@ -32,20 +32,20 @@ describe('TemClient.resolveSender', () => {
     it('expands a bare local part to the configured domain', () => {
         const client = makeClient();
         const result = client.resolveSender('noreply');
-        assert.equal(result.email, 'noreply@ai.svenlaa.eu');
+        assert.equal(result.email, 'noreply@example.com');
         assert.equal(result.name, undefined);
     });
 
     it('passes through a full address at the correct domain', () => {
         const client = makeClient();
-        const result = client.resolveSender('hello@ai.svenlaa.eu');
-        assert.equal(result.email, 'hello@ai.svenlaa.eu');
+        const result = client.resolveSender('hello@example.com');
+        assert.equal(result.email, 'hello@example.com');
     });
 
     it('includes the display name when provided', () => {
         const client = makeClient();
         const result = client.resolveSender('noreply', 'No Reply');
-        assert.equal(result.email, 'noreply@ai.svenlaa.eu');
+        assert.equal(result.email, 'noreply@example.com');
         assert.equal(result.name, 'No Reply');
     });
 
@@ -59,16 +59,16 @@ describe('TemClient.resolveSender', () => {
 
     it('is case-insensitive for the domain check', () => {
         const client = makeClient();
-        const result = client.resolveSender('Test@AI.Svenlaa.EU');
-        assert.equal(result.email, 'Test@AI.Svenlaa.EU');
+        const result = client.resolveSender('Test@EXAMPLE.COM');
+        assert.equal(result.email, 'Test@EXAMPLE.COM');
     });
 
     it('respects a custom sending domain', () => {
-        const client = makeClient({ sendingDomain: 'example.com' });
+        const client = makeClient({ sendingDomain: 'other.example' });
         const result = client.resolveSender('bot');
-        assert.equal(result.email, 'bot@example.com');
+        assert.equal(result.email, 'bot@other.example');
         assert.throws(
-            () => client.resolveSender('x@ai.svenlaa.eu'),
+            () => client.resolveSender('x@example.com'),
             /not allowed/,
         );
     });
@@ -118,10 +118,20 @@ describe('loadConfig', () => {
         assert.throws(() => loadConfig(), /SCW_ACCESS_KEY/);
     });
 
+    it('throws when TEM_SENDING_DOMAIN is missing', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
+        const { loadConfig } = await import('../src/config.ts');
+        assert.throws(() => loadConfig(), /TEM_SENDING_DOMAIN/);
+    });
+
     it('throws when MCP_AUTH_TOKEN is missing in http mode', async () => {
         process.env.SCW_ACCESS_KEY = 'SCWTEST';
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         const { loadConfig } = await import('../src/config.ts');
         assert.throws(() => loadConfig(), /MCP_AUTH_TOKEN/);
     });
@@ -131,11 +141,12 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
         process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
         assert.equal(config.accessKey, 'SCWTEST');
         assert.equal(config.region, 'fr-par');
-        assert.equal(config.sendingDomain, 'ai.svenlaa.eu');
+        assert.equal(config.sendingDomain, 'example.com');
         assert.equal(config.transport, 'http');
         assert.equal(config.port, 3000);
     });
@@ -145,6 +156,7 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_DEFAULT_PROJECT_ID = 'fallback-proj';
         process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
         assert.equal(config.projectId, 'fallback-proj');
@@ -155,6 +167,7 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
         process.env.MCP_TRANSPORT = 'stdio';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
         assert.equal(config.transport, 'stdio');
@@ -165,6 +178,7 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
         process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         process.env.MCP_PORT = '8080';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
@@ -176,6 +190,7 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
         process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         process.env.MCP_PORT = 'abc';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
@@ -187,6 +202,7 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
         process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         process.env.MCP_PORT = '99999';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
@@ -198,6 +214,7 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
         process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         process.env.MCP_PORT = '0';
         const { loadConfig } = await import('../src/config.ts');
         assert.equal(loadConfig().port, 3000);
@@ -210,6 +227,7 @@ describe('loadConfig', () => {
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
         process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.TEM_SENDING_DOMAIN = 'example.com';
         process.env.MCP_PORT = '';
         const { loadConfig } = await import('../src/config.ts');
         assert.equal(loadConfig().port, 3000);

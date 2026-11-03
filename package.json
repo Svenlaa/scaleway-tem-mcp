@@ -1,7 +1,7 @@
 {
     "name": "tem-mcp",
     "version": "1.0.0",
-    "description": "MCP server for Scaleway Transactional Email (TEM) — send emails from any address @ai.svenlaa.eu",
+    "description": "MCP server for Scaleway Transactional Email (TEM) — send emails from any address on your configured sending domain",
     "type": "module",
     "bin": {
         "tem-mcp": "./src/index.ts"
