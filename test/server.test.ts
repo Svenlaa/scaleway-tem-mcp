@@ -16,6 +16,9 @@ function makeConfig(overrides: Partial<TemMcpConfig> = {}): TemMcpConfig {
         projectId: '11111111-1111-1111-1111-111111111111',
         region: 'fr-par',
         sendingDomain: 'ai.svenlaa.eu',
+        transport: 'stdio',
+        host: '127.0.0.1',
+        port: 3000,
         ...overrides,
     };
 }
@@ -130,6 +133,7 @@ describe('loadConfig', () => {
         'TEM_SENDING_DOMAIN',
         'TEM_AUDIT_DB',
         'MCP_TRANSPORT',
+        'MCP_PORT',
         'MCP_AUTH_TOKEN',
     ];
     let saved: Record<string, string | undefined>;
@@ -202,5 +206,62 @@ describe('loadConfig', () => {
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
         assert.equal(config.transport, 'stdio');
+    });
+
+    it('uses a valid MCP_PORT when set', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.MCP_PORT = '8080';
+        const { loadConfig } = await import('../src/config.ts');
+        const config = loadConfig();
+        assert.equal(config.port, 8080);
+    });
+
+    it('falls back to 3000 when MCP_PORT is not a number', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.MCP_PORT = 'abc';
+        const { loadConfig } = await import('../src/config.ts');
+        const config = loadConfig();
+        assert.equal(config.port, 3000);
+    });
+
+    it('falls back to 3000 when MCP_PORT is out of range', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.MCP_PORT = '99999';
+        const { loadConfig } = await import('../src/config.ts');
+        const config = loadConfig();
+        assert.equal(config.port, 3000);
+    });
+
+    it('falls back to 3000 when MCP_PORT is zero or negative', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.MCP_PORT = '0';
+        const { loadConfig } = await import('../src/config.ts');
+        assert.equal(loadConfig().port, 3000);
+        process.env.MCP_PORT = '-1';
+        assert.equal(loadConfig().port, 3000);
+    });
+
+    it('falls back to 3000 when MCP_PORT is empty or whitespace', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
+        process.env.MCP_PORT = '';
+        const { loadConfig } = await import('../src/config.ts');
+        assert.equal(loadConfig().port, 3000);
+        process.env.MCP_PORT = '   ';
+        assert.equal(loadConfig().port, 3000);
     });
 });

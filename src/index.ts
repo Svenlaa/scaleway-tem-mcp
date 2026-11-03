@@ -23,11 +23,9 @@
  *   MCP_PORT            — HTTP port (default: 3000)
  *   SCW_DEFAULT_REGION  — default region (default: fr-par)
  *   TEM_SENDING_DOMAIN  — sending domain (default: ai.svenlaa.eu)
- *   TEM_AUDIT_DB        — path to a SQLite file for audit logging
  */
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { timingSafeEqual } from 'node:crypto';
-import { DatabaseSync } from 'node:sqlite';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
@@ -35,29 +33,17 @@ import { styleText } from 'node:util';
 import { loadConfig, type TemMcpConfig } from './config.ts';
 import { TemClient } from './scaleway.ts';
 import { registerTools } from './tools.ts';
-
-// ── Audit log (optional, native node:sqlite — no dependency) ────────────────
-let auditDb: DatabaseSync | undefined;
-
-function initAuditDb(path: string): DatabaseSync {
-    const db = new DatabaseSync(path);
-    db.exec(`
-        CREATE TABLE IF NOT EXISTS sent_emails (
-            id         TEXT PRIMARY KEY,
-            from_email TEXT NOT NULL,
-            subject    TEXT NOT NULL,
-            recipients TEXT NOT NULL,
-            status     TEXT,
-            sent_at    TEXT NOT NULL DEFAULT (datetime('now'))
-        )
-    `);
-    return db;
-}
+import { SERVER_ICON_SRC } from './icon.ts';
 
 // ── MCP server factory (fresh instance per HTTP request in stateless mode) ──
 function createMcpServer(client: TemClient): McpServer {
     const server = new McpServer(
-        { name: 'tem-mcp', version: '1.0.0' },
+        {
+            name: 'tem-mcp',
+            version: '1.0.0',
+            title: 'Transactional Email MCP',
+            icons: [{ src: SERVER_ICON_SRC, mimeType: 'image/svg+xml', sizes: ['512x512'] }],
+        },
         { capabilities: { tools: {} } },
     );
     registerTools(server, client);
@@ -178,7 +164,6 @@ function startHttpServer(config: TemMcpConfig, client: TemClient): void {
     const shutdown = (signal: string): void => {
         console.error(styleText('yellow', `[tem-mcp] Received ${signal}, shutting down…`));
         server.close(() => process.exit(0));
-        auditDb?.close();
         setTimeout(() => process.exit(0), 3000).unref();
     };
     process.on('SIGINT', () => shutdown('SIGINT'));
@@ -198,7 +183,6 @@ async function startStdio(config: TemMcpConfig, client: TemClient): Promise<void
     const shutdown = async (signal: string): Promise<void> => {
         console.error(styleText('yellow', `[tem-mcp] Received ${signal}, shutting down…`));
         await server.close();
-        auditDb?.close();
         process.exit(0);
     };
     process.on('SIGINT', () => void shutdown('SIGINT'));
@@ -209,11 +193,6 @@ async function startStdio(config: TemMcpConfig, client: TemClient): Promise<void
 
 async function main(): Promise<void> {
     const config = loadConfig();
-
-    if (config.auditDbPath) {
-        auditDb = initAuditDb(config.auditDbPath);
-        console.error(styleText('dim', `[tem-mcp] Audit log: ${config.auditDbPath}`));
-    }
 
     const client = new TemClient(config);
 

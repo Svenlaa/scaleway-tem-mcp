@@ -28,8 +28,31 @@ const headerSchema = z.object({
 // Tool registration
 // ---------------------------------------------------------------------------
 
+/**
+ * Resolve a sending-domain name to its Scaleway domain ID.
+ * The TEM API filters by domain ID, not by name.
+ */
+async function resolveDomainId(client: TemClient, domainName: string): Promise<string> {
+    const response = await client.api.listDomains({ name: domainName });
+    const found = response.domains.find(
+        (d) => d.name.toLowerCase() === domainName.toLowerCase(),
+    );
+    if (!found) {
+        throw new Error(`Unknown sending domain: ${domainName}`);
+    }
+    return found.id;
+}
+
 export function registerTools(server: McpServer, client: TemClient): void {
     const domain = client.config.sendingDomain;
+    const escapedDomain = domain.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const fromSchema = z
+        .string()
+        .regex(
+            new RegExp(`^[a-zA-Z0-9._%+-]+(@${escapedDomain})?$`, 'i'),
+            `Sender must be a local part (e.g. "noreply") or a full address @${domain}, ` +
+                'with only letters, digits and ._%+- in the local part',
+        );
 
     // ── send_email ──────────────────────────────────────────────────────────
     server.registerTool(
@@ -41,12 +64,10 @@ export function registerTools(server: McpServer, client: TemClient): void {
                 `The "from" field accepts either a bare local part (e.g. "noreply") or a full ` +
                 `email address — it will always be resolved to the @${domain} domain.`,
             inputSchema: {
-                from: z
-                    .string()
-                    .describe(
-                        `Sender. Either a local part (e.g. "noreply" → noreply@${domain}) ` +
-                            `or a full address @${domain} (e.g. "hello@${domain}")`,
-                    ),
+                from: fromSchema.describe(
+                    `Sender. Either a local part (e.g. "noreply" → noreply@${domain}) ` +
+                        `or a full address @${domain} (e.g. "hello@${domain}")`,
+                ),
                 fromName: z.string().optional().describe('Display name for the sender'),
                 to: z
                     .array(addressSchema)
@@ -113,9 +134,9 @@ export function registerTools(server: McpServer, client: TemClient): void {
             const emails = response.emails.map((e) => ({
                 id: e.id,
                 status: e.status,
-                from: e.from?.email,
+                from: e.mailFrom,
                 subject: e.subject,
-                date: e.date,
+                date: e.createdAt,
             }));
 
             return {
@@ -160,17 +181,17 @@ export function registerTools(server: McpServer, client: TemClient): void {
         },
         async (args) => {
             const response = await client.api.listEmails({
-                domainName: args.domain ?? domain,
+                domainId: await resolveDomainId(client, args.domain ?? domain),
                 pageSize: args.limit ?? 20,
             });
 
             const emails = response.emails.map((e) => ({
                 id: e.id,
                 status: e.status,
-                from: e.from?.email,
-                to: e.to?.map((t) => t.email),
+                from: e.mailFrom,
+                to: e.mailRcpt,
                 subject: e.subject,
-                date: e.date,
+                date: e.createdAt,
             }));
 
             return {
@@ -224,7 +245,7 @@ export function registerTools(server: McpServer, client: TemClient): void {
         },
         async (args) => {
             const stats = await client.api.getStatistics({
-                domainName: args.domain ?? domain,
+                domainId: await resolveDomainId(client, args.domain ?? domain),
             });
             return {
                 content: [

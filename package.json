@@ -18,7 +18,7 @@
         "transactional-email"
     ],
     "author": "Sven Laa",
-    "license": "ISC",
+    "license": "EUPL-1.2",
     "devEngines": {
         "packageManager": {
             "name": "pnpm",

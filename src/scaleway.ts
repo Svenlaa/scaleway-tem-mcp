@@ -33,7 +33,7 @@ export class TemClient {
 
         if (from.includes('@')) {
             const [, fromDomain] = from.split('@');
-            if (fromDomain.toLowerCase() !== domain.toLowerCase()) {
+            if (!fromDomain || fromDomain.toLowerCase() !== domain.toLowerCase()) {
                 throw new Error(
                     `Sender domain "${fromDomain}" is not allowed. ` +
                     `Only addresses @${domain} can be used.`,

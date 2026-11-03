@@ -40,6 +40,15 @@ function optional(name: string, fallback: string): string {
     return process.env[name] ?? fallback;
 }
 
+const DEFAULT_PORT = 3000;
+
+function portOrDefault(raw: string | undefined): number {
+    if (raw === undefined || raw.trim() === '') return DEFAULT_PORT;
+    const parsed = Number.parseInt(raw, 10);
+    if (!Number.isInteger(parsed) || parsed < 1 || parsed > 65535) return DEFAULT_PORT;
+    return parsed;
+}
+
 export function loadConfig(): TemMcpConfig {
     const config: TemMcpConfig = {
         accessKey: required('SCW_ACCESS_KEY'),
@@ -50,7 +59,7 @@ export function loadConfig(): TemMcpConfig {
         auditDbPath: process.env.TEM_AUDIT_DB,
         transport: process.env.MCP_TRANSPORT === 'stdio' ? 'stdio' : 'http',
         host: optional('MCP_HOST', '127.0.0.1'),
-        port: Number.parseInt(optional('MCP_PORT', '3000'), 10),
+        port: portOrDefault(process.env.MCP_PORT),
         authToken: process.env.MCP_AUTH_TOKEN,
     };
 
