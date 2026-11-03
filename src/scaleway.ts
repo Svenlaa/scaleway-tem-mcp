@@ -1,4 +1,5 @@
 import { Temv1alpha1 } from '@scaleway/sdk';
+import { createClient, type Client } from '@scaleway/sdk-client';
 import type { TemMcpConfig } from './config.ts';
 
 /**
@@ -7,16 +8,18 @@ import type { TemMcpConfig } from './config.ts';
  */
 export class TemClient {
     readonly api: Temv1alpha1.API;
+    readonly client: Client;
     readonly config: TemMcpConfig;
 
     constructor(config: TemMcpConfig) {
         this.config = config;
-        this.api = new Temv1alpha1.API({
+        this.client = createClient({
             accessKey: config.accessKey,
             secretKey: config.secretKey,
             defaultProjectId: config.projectId,
             defaultRegion: config.region as never,
         });
+        this.api = new Temv1alpha1.API(this.client);
     }
 
     /**

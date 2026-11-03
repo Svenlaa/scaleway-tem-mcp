@@ -33,6 +33,7 @@
     "dependencies": {
         "@modelcontextprotocol/sdk": "^1.32.2",
         "@scaleway/sdk": "^4.2.8",
+        "@scaleway/sdk-client": "2.16.0",
         "zod": "^4.6.7"
     },
     "devDependencies": {
