@@ -129,6 +129,8 @@ describe('loadConfig', () => {
         'SCW_DEFAULT_REGION',
         'TEM_SENDING_DOMAIN',
         'TEM_AUDIT_DB',
+        'MCP_TRANSPORT',
+        'MCP_AUTH_TOKEN',
     ];
     let saved: Record<string, string | undefined>;
     let tmpDir: string;
@@ -160,23 +162,45 @@ describe('loadConfig', () => {
         assert.throws(() => loadConfig(), /SCW_ACCESS_KEY/);
     });
 
+    it('throws when MCP_AUTH_TOKEN is missing in http mode', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        const { loadConfig } = await import('../src/config.ts');
+        assert.throws(() => loadConfig(), /MCP_AUTH_TOKEN/);
+    });
+
     it('loads config with defaults when all required vars are set', async () => {
         process.env.SCW_ACCESS_KEY = 'SCWTEST';
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
         assert.equal(config.accessKey, 'SCWTEST');
         assert.equal(config.region, 'fr-par');
         assert.equal(config.sendingDomain, 'ai.svenlaa.eu');
+        assert.equal(config.transport, 'http');
+        assert.equal(config.port, 3000);
     });
 
     it('accepts SCW_DEFAULT_PROJECT_ID as fallback for project ID', async () => {
         process.env.SCW_ACCESS_KEY = 'SCWTEST';
         process.env.SCW_SECRET_KEY = 'secret';
         process.env.SCW_DEFAULT_PROJECT_ID = 'fallback-proj';
+        process.env.MCP_AUTH_TOKEN = 'test-token';
         const { loadConfig } = await import('../src/config.ts');
         const config = loadConfig();
         assert.equal(config.projectId, 'fallback-proj');
+    });
+
+    it('allows stdio transport without auth token', async () => {
+        process.env.SCW_ACCESS_KEY = 'SCWTEST';
+        process.env.SCW_SECRET_KEY = 'secret';
+        process.env.SCW_PROJECT_ID = 'proj';
+        process.env.MCP_TRANSPORT = 'stdio';
+        const { loadConfig } = await import('../src/config.ts');
+        const config = loadConfig();
+        assert.equal(config.transport, 'stdio');
     });
 });

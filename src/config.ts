@@ -16,6 +16,14 @@ export interface TemMcpConfig {
     sendingDomain: string;
     /** Optional: log every sent email to a local SQLite database */
     auditDbPath?: string;
+    /** Transport mode: "http" (default) or "stdio" */
+    transport: 'http' | 'stdio';
+    /** HTTP listen host */
+    host: string;
+    /** HTTP listen port */
+    port: number;
+    /** Bearer token required on every MCP request when transport=http */
+    authToken?: string;
 }
 
 function required(...names: string[]): string {
@@ -40,7 +48,21 @@ export function loadConfig(): TemMcpConfig {
         region: optional('SCW_DEFAULT_REGION', 'fr-par'),
         sendingDomain: optional('TEM_SENDING_DOMAIN', 'ai.svenlaa.eu'),
         auditDbPath: process.env.TEM_AUDIT_DB,
+        transport: process.env.MCP_TRANSPORT === 'stdio' ? 'stdio' : 'http',
+        host: optional('MCP_HOST', '127.0.0.1'),
+        port: Number.parseInt(optional('MCP_PORT', '3000'), 10),
+        authToken: process.env.MCP_AUTH_TOKEN,
     };
+
+    if (config.transport === 'http' && !config.authToken) {
+        throw new Error(
+            styleText(
+                'red',
+                'MCP_AUTH_TOKEN is required when MCP_TRANSPORT=http — ' +
+                    'the HTTP endpoint sends real email and must not be unauthenticated.',
+            ),
+        );
+    }
 
     // Validate the sending domain looks sane using RegExp.escape (Node 24+)
     const domainPattern = new RegExp(

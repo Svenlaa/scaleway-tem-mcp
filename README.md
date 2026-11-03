@@ -22,6 +22,10 @@ Built for **Node.js 26+** — runs TypeScript natively with zero build step, use
 | `SCW_ACCESS_KEY` | yes | — | Scaleway access key |
 | `SCW_SECRET_KEY` | yes | — | Scaleway secret key |
 | `SCW_PROJECT_ID` (or `SCW_DEFAULT_PROJECT_ID`) | yes | — | Scaleway project ID |
+| `MCP_AUTH_TOKEN` | yes (http mode) | — | Bearer token required on every MCP request |
+| `MCP_TRANSPORT` | no | `http` | `http` (Streamable HTTP) or `stdio` |
+| `MCP_HOST` | no | `127.0.0.1` | HTTP bind address |
+| `MCP_PORT` | no | `3000` | HTTP port |
 | `SCW_DEFAULT_REGION` | no | `fr-par` | Default region |
 | `TEM_SENDING_DOMAIN` | no | `ai.svenlaa.eu` | Domain for sender addresses |
 | `TEM_AUDIT_DB` | no | — | SQLite path for audit logging |
@@ -32,12 +36,26 @@ A `.env` file in the working directory is loaded automatically via `process.load
 
 ```bash
 pnpm install
-pnpm start          # run the MCP server over stdio
+pnpm start          # HTTP server on 127.0.0.1:3000 (bearer auth)
+MCP_TRANSPORT=stdio pnpm start   # local stdio mode (no token needed)
 pnpm dev            # run with --watch for development
 pnpm test           # run tests with node:test
 ```
 
-### MCP client config (e.g. Claude Desktop / Vibe)
+### HTTP mode (remote, e.g. Vibe web)
+
+The server speaks **Streamable HTTP** at `POST /mcp` (stateless). Every request
+requires `Authorization: Bearer $MCP_AUTH_TOKEN`. `GET /health` is unauthenticated.
+
+```
+Vibe web ──HTTPS──► reverse proxy (TLS) ──► tem-mcp :3000/mcp ──► Scaleway TEM
+```
+
+Point your MCP client at `https://your-host/mcp` with the bearer token.
+Put a TLS-terminating reverse proxy (Caddy/nginx) in front — the server itself
+listens on plain HTTP on localhost.
+
+### stdio mode (local)
 
 ```json
 {
@@ -46,6 +64,7 @@ pnpm test           # run tests with node:test
             "command": "node",
             "args": ["/path/to/tem-mcp/src/index.ts"],
             "env": {
+                "MCP_TRANSPORT": "stdio",
                 "SCW_ACCESS_KEY": "SCW…",
                 "SCW_SECRET_KEY": "…",
                 "SCW_PROJECT_ID": "…"
@@ -77,7 +96,7 @@ This sends from `noreply@ai.svenlaa.eu`.
 
 ```
 src/
-├── index.ts       # Entry point — MCP server over stdio, graceful shutdown
+├── index.ts       # Entry point — HTTP (Streamable HTTP + bearer auth) or stdio transport
 ├── config.ts      # Env loading (process.loadEnvFile) + validation
 ├── scaleway.ts    # TemClient wrapper around @scaleway/sdk Temv1alpha1.API
 └── tools.ts       # Tool definitions (zod schemas) registered on McpServer
