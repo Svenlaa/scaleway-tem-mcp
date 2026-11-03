@@ -2,7 +2,7 @@
 
 MCP (Model Context Protocol) server for [Scaleway Transactional Email (TEM)](https://www.scaleway.com/en/transactional-email/). Lets MCP consumers send emails from **any address @ `ai.svenlaa.eu`** (configurable).
 
-Built for **Node.js 26+** — runs TypeScript natively with zero build step, uses built-in `node:test`, `node:sqlite`, and `process.loadEnvFile`. Only 3 runtime dependencies.
+Built for **Node.js 26+** — runs TypeScript natively with zero build step, uses built-in `node:test` and `process.loadEnvFile`. Only 3 runtime dependencies.
 
 ## Tools
 
@@ -28,7 +28,6 @@ Built for **Node.js 26+** — runs TypeScript natively with zero build step, use
 | `MCP_PORT` | no | `3000` | HTTP port |
 | `SCW_DEFAULT_REGION` | no | `fr-par` | Default region |
 | `TEM_SENDING_DOMAIN` | no | `ai.svenlaa.eu` | Domain for sender addresses |
-| `TEM_AUDIT_DB` | no | — | SQLite path for audit logging |
 
 A `.env` file in the working directory is loaded automatically via `process.loadEnvFile()`.
 
@@ -101,14 +100,13 @@ src/
 ├── scaleway.ts    # TemClient wrapper around @scaleway/sdk Temv1alpha1.API
 └── tools.ts       # Tool definitions (zod schemas) registered on McpServer
 test/
-└── server.test.ts # Tests using node:test + node:sqlite
+└── server.test.ts # Tests using node:test
 ```
 
 ### Node.js 26 features used
 
 - **Native TypeScript** — `.ts` files run directly, no build step
 - **`node:test`** — built-in test runner (`pnpm test`)
-- **`node:sqlite`** — built-in SQLite for optional audit logging
 - **`process.loadEnvFile()`** — native `.env` loading, no `dotenv`
 - **`util.styleText()`** — colored terminal output, no chalk
 - **`node --watch`** — file watching for dev mode

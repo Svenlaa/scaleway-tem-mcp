@@ -14,8 +14,6 @@ export interface TemMcpConfig {
     region: string;
     /** The domain from which emails can be sent, e.g. "ai.svenlaa.eu" */
     sendingDomain: string;
-    /** Optional: log every sent email to a local SQLite database */
-    auditDbPath?: string;
     /** Transport mode: "http" (default) or "stdio" */
     transport: 'http' | 'stdio';
     /** HTTP listen host */
@@ -56,7 +54,6 @@ export function loadConfig(): TemMcpConfig {
         projectId: required('SCW_PROJECT_ID', 'SCW_DEFAULT_PROJECT_ID'),
         region: optional('SCW_DEFAULT_REGION', 'fr-par'),
         sendingDomain: optional('TEM_SENDING_DOMAIN', 'ai.svenlaa.eu'),
-        auditDbPath: process.env.TEM_AUDIT_DB,
         transport: process.env.MCP_TRANSPORT === 'stdio' ? 'stdio' : 'http',
         host: optional('MCP_HOST', '127.0.0.1'),
         port: portOrDefault(process.env.MCP_PORT),

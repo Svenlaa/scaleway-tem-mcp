@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { DatabaseSync } from 'node:sqlite';
 import { TemClient } from '../src/scaleway.ts';
 import type { TemMcpConfig } from '../src/config.ts';
 
@@ -75,52 +74,6 @@ describe('TemClient.resolveSender', () => {
     });
 });
 
-// ── node:sqlite audit log ───────────────────────────────────────────────────
-
-describe('audit log (node:sqlite)', () => {
-    let dir: string;
-    let dbPath: string;
-
-    beforeEach(() => {
-        dir = mkdtempSync(join(tmpdir(), 'tem-mcp-test-'));
-        dbPath = join(dir, 'audit.db');
-    });
-
-    afterEach(() => {
-        rmSync(dir, { recursive: true, force: true });
-    });
-
-    it('creates the sent_emails table and can insert/select', () => {
-        const db = new DatabaseSync(dbPath);
-        db.exec(`
-            CREATE TABLE IF NOT EXISTS sent_emails (
-                id         TEXT PRIMARY KEY,
-                from_email TEXT NOT NULL,
-                subject    TEXT NOT NULL,
-                recipients TEXT NOT NULL,
-                status     TEXT,
-                sent_at    TEXT NOT NULL DEFAULT (datetime('now'))
-            )
-        `);
-
-        const insert = db.prepare(
-            'INSERT INTO sent_emails (id, from_email, subject, recipients, status) VALUES (?, ?, ?, ?, ?)',
-        );
-        insert.run('msg-1', 'noreply@ai.svenlaa.eu', 'Hello', 'user@example.com', 'sent');
-
-        const row = db
-            .prepare('SELECT * FROM sent_emails WHERE id = ?')
-            .get('msg-1') as Record<string, unknown>;
-
-        assert.equal(row.from_email, 'noreply@ai.svenlaa.eu');
-        assert.equal(row.subject, 'Hello');
-        assert.equal(row.status, 'sent');
-        assert.ok(typeof row.sent_at === 'string' && row.sent_at.length > 0);
-
-        db.close();
-    });
-});
-
 // ── Config validation ───────────────────────────────────────────────────────
 
 describe('loadConfig', () => {
@@ -131,7 +84,6 @@ describe('loadConfig', () => {
         'SCW_DEFAULT_PROJECT_ID',
         'SCW_DEFAULT_REGION',
         'TEM_SENDING_DOMAIN',
-        'TEM_AUDIT_DB',
         'MCP_TRANSPORT',
         'MCP_PORT',
         'MCP_AUTH_TOKEN',
