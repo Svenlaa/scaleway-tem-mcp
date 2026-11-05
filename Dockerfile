@@ -9,6 +9,7 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile --prod
 
 COPY src ./src
+COPY assets ./assets
 
 # MCP_HOST must be 0.0.0.0 inside a container — the 127.0.0.1 default only
 # works for local runs. MCP_PORT/MCP_AUTH_TOKEN/SCW_* are set in Coolify.

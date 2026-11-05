@@ -26,6 +26,7 @@
  */
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { timingSafeEqual } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
@@ -108,6 +109,22 @@ function startHttpServer(config: TemMcpConfig, client: TemClient): void {
             if (req.method === 'GET' && req.url === '/health') {
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ ok: true, server: 'tem-mcp', domain: config.sendingDomain }));
+                return;
+            }
+
+            // Favicon — no auth, so browsers hitting the endpoint get an icon
+            if (req.method === 'GET' && (req.url === '/favicon.ico' || req.url === '/favicon.svg')) {
+                try {
+                    const icon = readFileSync(new URL('../assets/icon.svg', import.meta.url));
+                    res.writeHead(200, {
+                        'Content-Type': 'image/svg+xml',
+                        'Cache-Control': 'public, max-age=86400',
+                    });
+                    res.end(icon);
+                } catch {
+                    res.writeHead(404, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: 'Not found' }));
+                }
                 return;
             }
 
